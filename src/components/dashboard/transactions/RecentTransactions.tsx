@@ -1,5 +1,6 @@
 import { cn } from '@/lib/utils';
 import { ZERO } from '@/lib/constants/constants';
+import { TransactionCategory } from '@/types/api';
 
 import { TransactionIcon } from './TransactionIcon';
 
@@ -9,21 +10,21 @@ const transactions = [
     description: 'Deposit from my Card',
     amount: -79.99,
     date: '2024-03-20',
-    category: 'DEPOSIT_CARD',
+    category: TransactionCategory.DEPOSIT_CARD,
   },
   {
     id: 2,
     description: 'Deposit Paypal',
     amount: 3500.0,
     date: '2024-03-19',
-    category: 'PAYPAL',
+    category: TransactionCategory.PAYPAL,
   },
   {
     id: 3,
     description: 'Jemi Wilson',
     amount: -5.75,
     date: '2024-03-19',
-    category: 'JEMI_WILSON',
+    category: TransactionCategory.JEMI_WILSON,
   },
 ];
 

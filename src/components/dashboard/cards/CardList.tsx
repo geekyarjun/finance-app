@@ -1,8 +1,10 @@
+import { Card } from '@/types/api';
+
 import { MyCard } from './MyCard';
 import { OtherCard } from './OtherCard';
 import { cards } from './data';
 
-const RenderDifferentCards = (card) => {
+const RenderDifferentCards = (card: Card) => {
   switch (card.cardType) {
     case 'CARD_TYPE_1':
       return <MyCard {...card} />;

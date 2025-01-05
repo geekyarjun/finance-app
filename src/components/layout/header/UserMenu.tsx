@@ -7,7 +7,6 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { cn } from '@/lib/utils';
-import { HEADER } from '@/lib/constants/layout';
 
 export function UserMenu() {
   return (

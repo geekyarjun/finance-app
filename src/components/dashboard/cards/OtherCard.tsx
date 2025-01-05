@@ -1,15 +1,9 @@
 import { cn } from '@/lib/utils';
 import CardChip from '@/assets/ChipCard.png';
 import MaestroCardGray from '@/assets/MaestroCardGray.png';
+import { Card } from '@/types/api';
 
-interface MyCardProps {
-  type: 'visa' | 'mastercard';
-  number: string;
-  expiry: string;
-  holderName: string;
-}
-
-export function OtherCard({ number, expiry, holderName }: MyCardProps) {
+export function OtherCard({ number, expiry, holderName }: Card) {
   return (
     <div
       className={cn(

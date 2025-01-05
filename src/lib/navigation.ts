@@ -7,7 +7,6 @@ import {
   Loan,
   Tools,
   Econometrics,
-  Settings,
   Settings2,
 } from '@/components/svg';
 

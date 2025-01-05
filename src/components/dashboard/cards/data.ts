@@ -1,4 +1,6 @@
-export const cards = [
+import { Card, CardType } from '@/types/api';
+
+export const cards: Card[] = [
   {
     id: 1,
     name: 'Premium Credit Card',
@@ -8,8 +10,7 @@ export const cards = [
     balance: 2850.5,
     limit: 5000,
     holderName: 'Eddy Cusuma',
-    color: 'bg-gradient-to-r from-[#5B5A6F] to-[#000000]',
-    cardType: 'CARD_TYPE_1',
+    cardType: CardType.CARD_TYPE_1,
   },
   {
     id: 2,
@@ -20,8 +21,7 @@ export const cards = [
     balance: 1250.75,
     limit: 3000,
     holderName: 'John doe',
-    color: 'bg-gradient-to-br from-blue-500 to-cyan-500',
-    cardType: 'CARD_TYPE_2',
+    cardType: CardType.CARD_TYPE_2,
   },
   {
     id: 3,
@@ -32,7 +32,6 @@ export const cards = [
     balance: 4500.25,
     limit: 10000,
     holderName: 'Nkosi Brown',
-    color: 'bg-gradient-to-br from-violet-500 to-fuchsia-500',
-    cardType: 'CARD_TYPE_1',
+    cardType: CardType.CARD_TYPE_1,
   },
 ] as const;

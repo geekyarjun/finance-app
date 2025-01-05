@@ -1,25 +1,30 @@
 import { Paypal, Cards, JemiWilson } from '@/components/svg';
 import { cn } from '@/lib/utils';
+import { TransactionCategory } from '@/types/api';
 
 const ICON_CONFIG = {
-  PAYPAL: {
+  [TransactionCategory.PAYPAL]: {
     ICON: Paypal,
     COLOR: 'text-paypal',
     BG_COLOR: '#E7EDFF', // NEED TO FIND PROPER COLOR PALETTE NAME FOR THIS
   },
-  DEPOSIT_CARD: {
+  [TransactionCategory.DEPOSIT_CARD]: {
     ICON: Cards,
     COLOR: 'text-paypal',
     BG_COLOR: 'hsl(var(--warning-03))',
   },
-  JEMI_WILSON: {
+  [TransactionCategory.JEMI_WILSON]: {
     ICON: JemiWilson,
     COLOR: 'text-paypal',
     BG_COLOR: 'hsl(var(--success-03))',
   },
 };
 
-export const TransactionIcon = ({ category }) => {
+interface Props {
+  category: keyof typeof ICON_CONFIG;
+}
+
+export const TransactionIcon = ({ category }: Props) => {
   const Config = ICON_CONFIG[category];
 
   return (

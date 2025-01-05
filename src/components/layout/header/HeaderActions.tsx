@@ -5,7 +5,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { HEADER } from '@/lib/constants/layout';
 import { Notification, Settings } from '@/components/svg';
 
 export function HeaderActions() {
