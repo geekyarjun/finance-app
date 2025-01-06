@@ -14,13 +14,15 @@ export function OtherCard({ number, expiry, holderName }: Card) {
       role="region"
       aria-labelledby="credit-card-info"
     >
-      <div className="p-6 pb-9 space-y-8">
+      <div className="pl-5 pr-5 pt-6 pb-6 sm:pr-6 sm:pl-6 sm:pb-9 space-y-8">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-xs leading-[14.4px] text-secondary">Balance</p>
+            <p className="text-[11px] sm:text-xs leading-[14.4px] text-secondary">
+              Balance
+            </p>
             <p
               id="credit-card-balance"
-              className="font-semibold text-xl leading-6 text-neutral"
+              className="font-base sm:font-semibold text-[17px] sm:text-xl leading-6 text-neutral"
             >
               $5,756
             </p>
@@ -35,23 +37,23 @@ export function OtherCard({ number, expiry, holderName }: Card) {
 
         <div className="flex items-center">
           <div className="min-w-[66%]">
-            <p className="text-xs leading-[14.4px] text-secondary">
+            <p className="text-[11px] sm:text-xs leading-[14.4px] text-secondary">
               CARD HOLDER
             </p>
             <p
               id="card-holder-name"
-              className="font-semibold text-[15px] leading-[18px] mt-[3px] text-neutral"
+              className="font-semibold text-[13px] sm:text-[15px] leading-[18px] mt-[3px] text-neutral"
             >
               {holderName}
             </p>
           </div>
           <div>
-            <p className="text-xs leading-[14.4px] text-secondary">
+            <p className="text-[11px] sm:text-xs leading-[14.4px] text-secondary">
               VALID THRU
             </p>
             <p
               id="card-expiry"
-              className="font-semibold text-[15px] leading-[18px] mt-[3px] text-neutral"
+              className="font-semibold text-[13px] sm:text-[15px] leading-[18px] mt-[3px] text-neutral"
             >
               {expiry}
             </p>
@@ -67,7 +69,7 @@ export function OtherCard({ number, expiry, holderName }: Card) {
       >
         <p
           aria-labelledby="credit-card-number"
-          className="text-lg font-medium leading-[26.4px] text-neutral"
+          className="text-base sm:text-lg font-medium leading-[26.4px] text-neutral"
         >
           {number}
         </p>

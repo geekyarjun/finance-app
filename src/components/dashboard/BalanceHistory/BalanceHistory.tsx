@@ -41,9 +41,9 @@ const THREE_CHARACTERS = 3;
 export default function BalanceHistory() {
   return (
     <div>
-      <div className="flex items-center justify-between pb-5">
+      <div className="flex items-center justify-between pb-3 sm:pb-5">
         <div>
-          <h2 className="heading-md">Balance History</h2>
+          <h2 className="max-xs:text-lg heading-md">Balance History</h2>
         </div>
       </div>
       <Card className="w-full border-none shadow-none rounded-[25px]">

@@ -19,7 +19,7 @@ export function CardList() {
   return (
     <div className="flex gap-4 pb-4">
       {cards.map((card) => (
-        <div key={card.id} className="w-[350px] flex-none">
+        <div key={card.id} className="w-[290px] sm:w-[350px] flex-none">
           {RenderDifferentCards(card)}
         </div>
       ))}

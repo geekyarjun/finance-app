@@ -22,9 +22,9 @@ const BalanceHistory = lazy(
 
 export default function Dashboard() {
   return (
-    <div className="space-y-6">
+    <div className="space-y-5 sm:space-y-6">
       {/* Cards + Recent transactions */}
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-5 sm:gap-6 lg:grid-cols-3">
         <div className="lg:col-span-2">
           <Suspense fallback={<div>Loading...</div>}>
             <DashboardCards />
@@ -36,7 +36,7 @@ export default function Dashboard() {
       </div>
 
       {/* Weekly Activity + Expense Statistics */}
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-5 sm:gap-6 lg:grid-cols-3">
         <div className="lg:col-span-2">
           <WeeklyActivity />
         </div>
@@ -46,7 +46,7 @@ export default function Dashboard() {
       </div>
 
       {/* Quick Transfer + Balance History */}
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-5 sm:gap-6 lg:grid-cols-3">
         <div>
           <QuickTransfer />
         </div>

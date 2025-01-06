@@ -6,15 +6,15 @@ import { CardList } from './CardList';
 export default function DashboardCards() {
   return (
     <div>
-      <div className="flex items-center justify-between pb-5">
+      <div className="flex items-center justify-between pb-3 sm:pb-5">
         <div>
-          <h2 className="heading-md">My Cards</h2>
+          <h2 className="max-xs:text-lg heading-md">My Cards</h2>
         </div>
         <div className="flex items-center gap-4">
           <Button
             variant="outline"
             size="lg"
-            className="border-none shadow-none px-2 text-[17px] font-semibold h-auto text-neutral"
+            className="border-none shadow-none px-2 text-[15px] sm:text-[17px] font-semibold h-auto text-neutral"
           >
             See All
           </Button>

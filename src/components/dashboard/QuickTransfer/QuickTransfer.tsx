@@ -1,9 +1,9 @@
-import { useState } from 'react';
 import { Send } from '@/components/svg';
-import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
 import { Payee } from '@/types/api';
+import { useState } from 'react';
 
 import { Payeeuser } from './PayeeUser';
 
@@ -68,9 +68,9 @@ export default function QuickTransfer() {
 
   return (
     <div>
-      <div className="flex items-center justify-between pb-5">
+      <div className="flex items-center justify-between pb-3 sm:pb-5">
         <div>
-          <h2 className="heading-md">Quick Transfer</h2>
+          <h2 className="max-xs:text-lg heading-md">Quick Transfer</h2>
         </div>
       </div>
       <Card className="w-full border-none shadow-none rounded-[25px]">
@@ -89,7 +89,7 @@ export default function QuickTransfer() {
 
           {/* Input and Send Button */}
           <div className="mt-7 flex items-center">
-            <p className="text-secondary text-base mr-4 whitespace-nowrap">
+            <p className="text-secondary text-sm sm:text-base mr-4 whitespace-nowrap">
               Write Amount
             </p>
             <div className="relative flex-1">
@@ -98,10 +98,10 @@ export default function QuickTransfer() {
                 value={transferAmount}
                 onChange={(e) => setTransferAmount(e.target.value)}
                 placeholder="$100"
-                className="w-full py-2 pl-7 pr-16 rounded-full bg-[#EDF1F7] border-none h-[50px] text-sm"
+                className="w-full py-2 pl-7 pr-16 rounded-full bg-[#EDF1F7] border-none h-10 sm:h-[50px] text-sm"
               />
               <Button
-                className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-primary text-white rounded-[50px] h-[50px] py-[14px] px-6 text-base"
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-primary text-white rounded-[50px] h-10 sm:h-[50px] py-[14px] sm:px-6 text-sm sm:text-base"
                 onClick={() =>
                   alert(
                     `Transferring ${transferAmount} to User ID ${selectedUser}`,
@@ -109,7 +109,7 @@ export default function QuickTransfer() {
                 }
               >
                 Send
-                <Send />
+                <Send className="w-[20px] sm:w-[26px] h-[18px] sm:h-[23px]" />
               </Button>
             </div>
           </div>

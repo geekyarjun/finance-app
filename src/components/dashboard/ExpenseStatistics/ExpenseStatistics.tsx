@@ -34,9 +34,9 @@ const chartConfig = {
 export default function ExpenseStatistics() {
   return (
     <div>
-      <div className="flex items-center justify-between pb-5">
+      <div className="flex items-center justify-between pb-3 sm:pb-5">
         <div>
-          <h2 className="heading-md">Expenses Statistics</h2>
+          <h2 className="max-xs:text-lg heading-md">Expenses Statistics</h2>
         </div>
       </div>
       <Card className="w-full border-none shadow-none rounded-[25px]">
