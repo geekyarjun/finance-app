@@ -73,12 +73,13 @@ export default function RecentTransactions() {
               key={transaction.id}
               className="flex items-center justify-between space-x-4"
             >
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-4 w-[70%]">
                 <TransactionIcon category={transaction.category} />
-                <div>
+                <div className="truncate">
                   <p
                     className="text-sm sm:text-base font-medium leading-[19.36px] text-primary truncate"
-                    aria-labelledby={`transaction-description-${transaction.id}`}
+                    aria-labelledby={`transaction-description-${transaction.description}`}
+                    title={transaction.description}
                   >
                     {transaction.description}
                   </p>

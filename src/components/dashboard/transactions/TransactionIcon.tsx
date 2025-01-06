@@ -31,7 +31,7 @@ export const TransactionIcon = ({ category }: Props) => {
     <div
       aria-hidden="true"
       className={cn(
-        'rounded-full p-2 size-[50px] sm:size-[55px]',
+        'rounded-full p-2 size-[50px] sm:size-[55px] min-w-[50px] min-h-[50px] sm:min-w-[55px] sm:min-h-[55px]',
         'flex items-center justify-center',
       )}
       style={{ backgroundColor: Config.BG_COLOR }}
