@@ -9,7 +9,6 @@ import prettierConfig from 'eslint-config-prettier';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 
-
 export default tseslint.config(
   { ignores: ['dist'] },
   {
@@ -23,7 +22,7 @@ export default tseslint.config(
       react,
       prettier,
       'jsx-a11y': jsxA11y,
-      'import': importPlugin,
+      import: importPlugin,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
     },
@@ -44,11 +43,14 @@ export default tseslint.config(
       ...prettierConfig.rules,
 
       // Prettier integration
-      'prettier/prettier': ['error', { singleQuote: true, trailingComma: 'all', semi: true }],
+      'prettier/prettier': [
+        'error',
+        { singleQuote: true, trailingComma: 'all', semi: true },
+      ],
 
       // Custom react rules
       'react/jsx-key': 'error',
-      "react/no-unescaped-entities": "off",
+      'react/no-unescaped-entities': 'off',
       'react/jsx-no-useless-fragment': 'warn',
       'react/no-unstable-nested-components': 'warn',
 
@@ -59,7 +61,7 @@ export default tseslint.config(
       ],
 
       // Import rules
-      "import/no-unresolved": "error",
+      'import/no-unresolved': 'error',
       'import/no-duplicates': 'error',
       'import/order': [
         'error',
@@ -71,7 +73,10 @@ export default tseslint.config(
 
       // TypeScript rules
       '@typescript-eslint/no-explicit-any': 'error',
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        { argsIgnorePattern: '^_' },
+      ],
 
       // Additional custom rules
       'no-var': 'error',
@@ -81,9 +86,9 @@ export default tseslint.config(
       'prefer-template': 'error',
       'react/jsx-uses-react': 'off',
       'react/react-in-jsx-scope': 'off',
-      "no-magic-numbers": [
-        "error",
-        { "ignoreArrayIndexes": true, "ignoreDefaultValues": true }
+      'no-magic-numbers': [
+        'error',
+        { ignoreArrayIndexes: true, ignoreDefaultValues: true },
       ],
     },
     settings: {
@@ -93,12 +98,12 @@ export default tseslint.config(
       'import/resolver': {
         alias: {
           map: [
-            ['', './public'],  // <-- this line
+            ['', './public'], // <-- this line
             ['@', './src'],
           ],
           extensions: ['.js', '.jsx', '.ts', '.tsx'],
         },
-      }
+      },
     },
   },
-)
+);

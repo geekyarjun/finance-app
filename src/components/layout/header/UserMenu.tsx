@@ -6,9 +6,20 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { paths } from '@/config/paths';
+import { useLogout } from '@/lib/auth';
 import { cn } from '@/lib/utils';
+import { useNavigate } from 'react-router-dom';
 
 export function UserMenu() {
+  const navigate = useNavigate();
+  const logout = useLogout({
+    onSuccess: () => {
+      sessionStorage.removeItem('isLoggedIn');
+      navigate(paths.auth.login.getHref(location.pathname));
+    },
+  });
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -23,10 +34,12 @@ export function UserMenu() {
           </Avatar>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent align="end" className="[&>*]:cursor-pointer">
         <DropdownMenuItem>Profile</DropdownMenuItem>
         <DropdownMenuItem>Settings</DropdownMenuItem>
-        <DropdownMenuItem>Log out</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => logout.mutate({})}>
+          Log out
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );

@@ -7,7 +7,7 @@ import {
   SheetTitle,
 } from '@/components/ui/sheet';
 import { navigationItems } from '@/lib/navigation';
-import { APP_CONFIG } from '@/lib/constants/config';
+import { APP_CONFIG } from '@/config/appConfig';
 
 import { TaskFill } from '../svg';
 import { NavLink } from './NavLink';
